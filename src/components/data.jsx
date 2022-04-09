@@ -1,28 +1,74 @@
-export const itemData = [
-    
-    {
-      img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-      title: 'Burger',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-      title: 'Camera',
-    },
-    
-    {
-      img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-      title: 'Basketball',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-      title: 'Tomato basil',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-      title: 'Sea star',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-      title: 'Bike',
-    },
-  ];
+export const itemdata=[
+  {
+    id:1,
+    name: 'Abhish Mohanty',
+    analysisType: 'Premium',
+    BTCUSDT: 'Bitcoin/Tether',
+    exchange: 'Binance',
+    timeFrame: '4H',
+    market: 'Futures',
+    method: 'Swing Trading',
+    position: 'Short',
+    leverage: '5X',
+    profit: '0.10$',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis dolore dolorum sunt ipsam molestiae quasi volupt',
+    view:'1,967,381',
+    buy:'471,291',
+    date:'12-15-2021',
+    time:'23:18:51'
+  },
+  {
+    id:2,
+    name: 'Hooman Farzaneh',
+    analysisType: 'Premium',
+    BTCUSDT: 'Bitcoin/Tether',
+    exchange: 'Binance',
+    timeFrame: '1H',
+    market: 'Futures',
+    method: 'Swing Trading',
+    position: 'Short',
+    leverage: '10X',
+    profit: '0.8$',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis dolore dolorum sunt ipsam molestiae quasi volupt',
+    view:'2,967,381',
+    buy:'471,291',
+    date:'01-05-2021',
+    time:'02:18:51'
+  },
+  {
+    id:1,
+    name: 'Abhish Mohanty',
+    analysisType: 'Premium',
+    BTCUSDT: 'Bitcoin/Tether',
+    exchange: 'Binance',
+    timeFrame: '4H',
+    market: 'Futures',
+    method: 'Swing Trading',
+    position: 'Short',
+    leverage: '5X',
+    profit: '0.10$',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis dolore dolorum sunt ipsam molestiae quasi volupt',
+    view:'1,967,381',
+    buy:'471,291',
+    date:'12-15-2021',
+    time:'23:18:51'
+  },
+  {
+    id:1,
+    name: 'Abhish Mohanty',
+    analysisType: 'Premium',
+    BTCUSDT: 'Bitcoin/Tether',
+    exchange: 'Binance',
+    timeFrame: '4H',
+    market: 'Futures',
+    method: 'Swing Trading',
+    position: 'Short',
+    leverage: '5X',
+    profit: '0.10$',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis dolore dolorum sunt ipsam molestiae quasi volupt',
+    view:'1,967,381',
+    buy:'471,291',
+    date:'12-15-2021',
+    time:'23:18:51'
+  }
+]

@@ -1,91 +1,43 @@
-import {alpha, AppBar, Avatar, Badge, Button, InputBase, makeStyles, Toolbar, Typography} from "@material-ui/core";
-import { Cancel, Mail, Notifications, Search } from "@material-ui/icons";
-import { useState } from "react";
-
-const useStyles = makeStyles((theme) => ({
-    logoLg:{
-        display: "none",
-        [theme.breakpoints.up("sm")]:{
-            display : "block"
-        },
-    },
-    logoSm:{
-        display: "block",
-        [theme.breakpoints.up("sm")]:{
-            display : "none"
-        },
-    },
-    toolbar:{
-        display :"flex",
-        justifyContent : "space-between"
-    },
-    search:{
-        display :"flex",
-        alignItems: "center",
-        backgroundColor: alpha(theme.palette.common.white, 0.15),
-         '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
-             },
-        borderRadius: theme.shape.borderRadius,
-        width :"70%",     
-        [theme.breakpoints.down("sm")]:{
-            display : (props) => (props.open ? "flex" : "none"),
-        },
-    },  
-    input:{
-        color: "white",
-        marginLeft: theme.spacing(1),
-    },
-    cancel:{
-        [theme.breakpoints.up("sm")]:{
-            display :  "none",
-        },
-    },
-    searchButton:{
-        marginRight: theme.spacing(2),
-        [theme.breakpoints.up("sm")]:{
-            display : "none",
-        },
-    },
-    icons:{
-        alignItems: "center",
-        display : (props) => (props.open ? "none" : "flex"),
-    },
-    badge:{
-        marginRight: theme.spacing(2),
-    },
-
-}))
-
+import './navbar.scss';
+import {  KeyboardArrowDown, NightsStayOutlined, NotificationsNoneOutlined, SearchOutlined } from "@material-ui/icons";
+import {Avatar, Button} from '@material-ui/core';
  const Navbar = () => {
-     const [open, setOpen] = useState(false);
-  const classes = useStyles({open});
   return (
-    <AppBar position="fixed">
-        <Toolbar className={classes.toolbar}>
-            <Typography variant="h6" className={classes.logoSm}>
-              Hoom
-            </Typography>
-            <Typography variant="h6" className={classes.logoLg}>
-              Hoom far
-            </Typography>
-            <div className={classes.search}>
-                <Search />
-                <InputBase placeholder="search" className={classes.input}/>
-                <Cancel className={classes.cancel} onClick={()=>setOpen(false)} />
-            </div>
-            <div className={classes.icons}>
-                <Search className={classes.searchButton} onClick={()=>setOpen(true)}/>
-                <Badge badgeContent={4} color="secondary" className={classes.badge}>
-                    <Mail />
-                </Badge>     
-                <Badge badgeContent={2} color="secondary" className={classes.badge}>
-                    <Notifications />
-                </Badge> 
-                <Avatar alt="" src="" />
-            </div>
-        </Toolbar>
-    </AppBar>
+    <div className="navbar">
+      <div className="wrapper">
+        <h1>Signal Inbox</h1>
+        <div className="search">
+          <SearchOutlined  />
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div className="items">
+          <div className="item">
+            <h4 className="balance">Balance:$2,895,102</h4>
+            <span className="line" />
+          </div>
+          <div className="item">
+            <Button size="small" variant="contained" color="primary" className="btn">Connect wallet</Button>
+            <span className="line" />
+          </div>
+          <div className="item">
+            <NightsStayOutlined className='background'/>
+          </div>
+          <div className="item">
+            <NotificationsNoneOutlined className='background' />
+            <div className="counter"></div>
+          </div>
+          <div className="item">
+            <Avatar
+              src=""
+              alt=""
+              className="avatar"
+            />
+            <b>Juxtyn Henry</b>
+            <KeyboardArrowDown />
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 export default Navbar;
